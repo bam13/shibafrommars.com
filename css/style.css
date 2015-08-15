@@ -1,0 +1,132 @@
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #fff;
+}
+
+.row section {
+	position: absolute;
+	height: 50%;
+	cursor: pointer;
+	z-index: 10;
+}
+.one, #portfolio {
+ 	top:0;
+	left: 0;
+	background:#fff;
+}
+
+#portfolio {
+	background: url("img/portfolio.jpg") top center no-repeat;
+    background-size:cover;
+	-webkit-background-size:cover;
+}
+
+.two, #web-design {
+	top: 0;
+	left: 50%;
+	background:#eee;
+}
+
+#web-design {
+	background: url("img/gorilloweb.jpg") top center no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+}
+
+#illustrations {
+	top: 50%;
+	left: 0;
+	background: url("img/illustration.jpg") top center no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+}
+
+#contacts {
+	top: 50%;
+	left: 50%;
+	background: url("img/torino.png") top center no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+}
+
+
+.box{
+	padding-top:20px;
+}
+
+.color  {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	 display: flex;
+ 	 align-items: center;
+ 	 justify-content: center;
+}
+
+.white {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.white:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.red {
+    background-color: rgba(153, 0, 0, 0.4);
+}
+
+.red:hover {
+    background-color: rgba(153, 0, 0, 0.8);
+}
+
+.blue {
+    background-color: rgba(11, 25, 43, 0.4);
+}
+
+.blue:hover {
+    background-color: rgba(11, 25, 43, 0.8);
+}
+
+.green {
+    background-color: rgba(141, 212, 48, 0.4);
+}
+
+.green:hover {
+    background-color: rgba(141, 212, 48, 0.8);
+}
+
+.page {
+	position: absolute;
+	z-index: 0;
+}
+
+.content {
+	animation-name: content-fullsize;
+  	animation-duration: 300ms;
+ 	animation-iteration-count:1;
+ 	animation-timing-function:ease-in;
+ 	animation-fill-mode:forwards;
+ 	color: black;
+}
+
+
+
+@keyframes content-fullsize {
+
+from {
+	opacity:0.8;
+	width: 50%;
+	height: 50%;
+}
+
+ to {
+ 	opacity: 1;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+}
