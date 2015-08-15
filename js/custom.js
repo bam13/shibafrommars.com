@@ -1,13 +1,19 @@
 $(document).ready(function() {
 
-   var $this=$(this);
+  $('.page-call',this).on('click',function(){
+       $("#portfoliopage").load("portfolio.html"); 
+    });
 
-   $('.page-call').on('click',function(){
-   $('.page').addClass("content");
+  $('.page-call',this).on('click',function(){
+       $("#weworkspage").load("webworks.html"); 
+    });
+
+
+   $('.fa-times').click(function(){
+     $('.page').removeClass("content");
   });
 
 
-   $('.fa-times').on('click',function(){
-   $('.content').fadeOut('slow','swing');
-  });
-})
+});
+
+
