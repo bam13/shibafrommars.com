@@ -12,7 +12,7 @@
 	cursor: pointer;
 	z-index: 10;
 }
-.one, #portfolio {
+#one, #portfolio {
  	top:0;
 	left: 0;
 	background:#fff;
@@ -24,7 +24,7 @@
 	-webkit-background-size:cover;
 }
 
-.two, #web-design {
+#two, #web-design {
 	top: 0;
 	left: 50%;
 	background:#eee;

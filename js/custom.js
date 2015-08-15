@@ -10,5 +10,4 @@ $(document).ready(function() {
    $('.fa-times').on('click',function(){
    $('.content').fadeOut('slow','swing');
   });
-times
 })
