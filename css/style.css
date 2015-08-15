@@ -29,7 +29,10 @@ a:hover {
  	top:0;
 	left: 0;
 	background:#fff;
+	color: black;
+
 }
+
 
 #portfolio {
 	background: url("img/portfolio.jpg") top center no-repeat;
@@ -40,7 +43,8 @@ a:hover {
 #two, #web-design {
 	top: 0;
 	left: 50%;
-	background:#eee;
+	 background-color: rgba(153, 0, 0, 1);
+	 color: #fff;
 }
 
 #web-design {
@@ -49,17 +53,26 @@ a:hover {
 	-webkit-background-size:cover;
 }
 
-#illustrations {
+#three, #illustrations {
 	top: 50%;
 	left: 0;
+	background-color: rgba(11, 25, 43, 1);
+	color: #fff;
+}
+
+#illustrations {
 	background: url("img/illustration.jpg") top center no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 }
 
-#contacts {
+#four, #contacts {
 	top: 50%;
 	left: 50%;
+	background-color: rgba(141, 212, 48, 1);
+	color: #000;
+}
+#contacts {
 	background: url("img/torino.png") top center no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -118,7 +131,7 @@ a:hover {
 	margin-left: 0;
 }
 
-.page-call {
+.page-one, .page-two, .page-three, .page-four {
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -130,7 +143,6 @@ a:hover {
  	animation-iteration-count:1;
  	animation-timing-function:ease-in;
  	animation-fill-mode:forwards;
- 	color: black;
 }
 
 
@@ -148,6 +160,59 @@ from {
 	width: 100%;
 	height: 100%;
 	z-index: 1000;
+	top:0;
+}
+
+}
+
+.content-negative {
+	animation-name: content-neg;
+  	animation-duration: 300ms;
+ 	animation-iteration-count:1;
+ 	animation-timing-function:ease-in;
+ 	animation-fill-mode:forwards;
+}
+
+
+
+@keyframes content-neg {
+
+from {
+	opacity:0.8;
+	width: 50%;
+	height: 50%;
+	left:50%;
+}
+
+ to {
+ 	opacity: 1;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	left:0;
+	top:0;
+}
+
+}
+
+#portfolio:hover, #web-design:hover, #illustrations:hover, #contacts:hover {
+    animation-name: awesome-bg;
+  	animation-duration: 2s;
+ 	animation-iteration-count:15;
+ 	animation-timing-function:linear;
+ 	animation-direction: alternate;
+}
+
+@keyframes awesome-bg {
+
+from {
+	background-size: 100%;
+	background-position: top center;
+}
+
+ to {
+ 	background-size: 120%;
+ 	background-position: top left;
 }
 
 }

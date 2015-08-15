@@ -1,16 +1,25 @@
 $(document).ready(function() {
 
-  $('.page-call',this).on('click',function(){
+  $('.page-one').on('click',function(){
        $("#portfoliopage").load("portfolio.html"); 
     });
 
-  $('.page-call',this).on('click',function(){
-       $("#weworkspage").load("webworks.html"); 
+  $('.page-two').on('click',function(){
+       $("#webworkspage").load("webworks.html"); 
+    });
+
+   $('.page-three').on('click',function(){
+       $("#artworkpage").load("artwork.html"); 
+    });
+
+    $('.page-four').on('click',function(){
+       $("#contactpage").load("contactme.html"); 
     });
 
 
+
    $('.fa-times').click(function(){
-     $('.page').removeClass("content");
+     $('.page').removeClass("content", "content-negative");
   });
 
 
