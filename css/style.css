@@ -1,218 +1,350 @@
+body {
+	background-color: #333;
+}
+
 .container {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000;
 }
 
 a {
-	color: #fff;
+  color: #fff;
 }
 
 a:hover {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .page a {
-	color: black;
+  color: black;
+}
+
+.close {
+	position: absolute;
+	top:5px;
+	right: 10px;
+	z-index: 1001;
 }
 
 .row section {
-	position: absolute;
-	height: 50%;
-	cursor: pointer;
-	z-index: 10;
-}
-#one, #portfolio {
- 	top:0;
-	left: 0;
-	background:#fff;
-	color: black;
-
+  position: absolute;
+  height: 50%;
+  cursor: pointer;
+  z-index: 10;
 }
 
+#one,
+#portfolio {
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: black;
+}
 
 #portfolio {
-	background: url("img/portfolio.jpg") top center no-repeat;
-    background-size:cover;
-	-webkit-background-size:cover;
+  background: url("img/home/portfolio.jpg") top center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 
-#two, #web-design {
-	top: 0;
-	left: 50%;
-	 background-color: rgba(153, 0, 0, 1);
-	 color: #fff;
+#two,
+#web-design {
+  top: 0;
+  left: 50%;
+  background-color: rgba(153, 0, 0, 1);
+  color: #fff;
 }
 
 #web-design {
-	background: url("img/gorilloweb.jpg") top center no-repeat;
-	background-size:cover;
-	-webkit-background-size:cover;
+  background: url("img/home/gorilloweb.jpg") top center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 
-#three, #illustrations {
-	top: 50%;
-	left: 0;
-	background-color: rgba(11, 25, 43, 1);
-	color: #fff;
+#three,
+#illustrations {
+  top: 50%;
+  left: 0;
+  background-color: rgba(11, 25, 43, 1);
+  color: #fff;
 }
 
 #illustrations {
-	background: url("img/illustration.jpg") top center no-repeat;
-	background-size:cover;
-	-webkit-background-size:cover;
+  background: url("img/home/illustration.jpg") top center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 
-#four, #contacts {
-	top: 50%;
-	left: 50%;
-	background-color: rgba(141, 212, 48, 1);
-	color: #000;
-}
+#four,
 #contacts {
-	background: url("img/torino.png") top center no-repeat;
-	background-size:cover;
-	-webkit-background-size:cover;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(141, 212, 48, 1);
+  color: #000;
 }
 
-
-.box, .color {
-	width:100%;
-	height: 100%;
-	 display: flex;
- 	 align-items: center;
- 	 justify-content: center;
- 	text-align: center;
+#contacts {
+  background: url("img/home/torino.png") top center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 
-.color  {
-	position: absolute;
+.box,
+.color {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.color {
+  position: absolute;
 }
 
 .white {
-	background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .white:hover {
-	background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .red {
-    background-color: rgba(153, 0, 0, 0.4);
+  background-color: rgba(153, 0, 0, 0.4);
 }
 
 .red:hover {
-    background-color: rgba(153, 0, 0, 0.8);
+  background-color: rgba(153, 0, 0, 0.8);
 }
 
 .blue {
-    background-color: rgba(11, 25, 43, 0.4);
+  background-color: rgba(11, 25, 43, 0.4);
 }
 
 .blue:hover {
-    background-color: rgba(11, 25, 43, 0.8);
+  background-color: rgba(11, 25, 43, 0.8);
 }
 
 .green {
-    background-color: rgba(141, 212, 48, 0.4);
+  background-color: rgba(141, 212, 48, 0.4);
 }
 
 .green:hover {
-    background-color: rgba(141, 212, 48, 0.8);
+  background-color: rgba(141, 212, 48, 0.8);
 }
 
 .page {
-	position: absolute;
-	z-index: 0;
-	opacity: 0;
-	margin-left: 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  margin-left: 0;
+  overflow: scroll;
+  -webkit-overflow:scroll;
 }
 
-.page-one, .page-two, .page-three, .page-four {
-	width: 100%;
-	height: 100%;
-	position: relative;
+.page-one,
+.page-two,
+.page-three,
+.page-four {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
+/*animazione elemento html esterno*/
 
 .content {
-	animation-name: content-fullsize;
-  	animation-duration: 300ms;
- 	animation-iteration-count:1;
- 	animation-timing-function:ease-in;
- 	animation-fill-mode:forwards;
+  -webkit-animation-name: content-fullsize;
+          animation-name: content-fullsize;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-
+@-webkit-keyframes content-fullsize {
+  from {
+    opacity: 0.8;
+    width: 50%;
+    height: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+  }
+}
 
 @keyframes content-fullsize {
-
-from {
-	opacity:0.8;
-	width: 50%;
-	height: 50%;
-}
-
- to {
- 	opacity: 1;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
-	top:0;
-}
-
+  from {
+    opacity: 0.8;
+    width: 50%;
+    height: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+  }
 }
 
 .content-negative {
-	animation-name: content-neg;
-  	animation-duration: 300ms;
- 	animation-iteration-count:1;
- 	animation-timing-function:ease-in;
- 	animation-fill-mode:forwards;
+  -webkit-animation-name: content-neg;
+          animation-name: content-neg;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-
+@-webkit-keyframes content-neg {
+  from {
+    opacity: 0.8;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+  }
+}
 
 @keyframes content-neg {
-
-from {
-	opacity:0.8;
-	width: 50%;
-	height: 50%;
-	left:50%;
+  from {
+    opacity: 0.8;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+  }
 }
 
- to {
- 	opacity: 1;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
-	left:0;
-	top:0;
+/*fine animazione html esterno*/
+/*animazione bg home*/
+#portfolio:hover,
+#web-design:hover,
+#illustrations:hover,
+#contacts:hover {
+  -webkit-animation-name: awesome-bg;
+          animation-name: awesome-bg;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-iteration-count: 15;
+          animation-iteration-count: 15;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
-}
-
-#portfolio:hover, #web-design:hover, #illustrations:hover, #contacts:hover {
-    animation-name: awesome-bg;
-  	animation-duration: 2s;
- 	animation-iteration-count:15;
- 	animation-timing-function:linear;
- 	animation-direction: alternate;
+@-webkit-keyframes awesome-bg {
+  0% {
+    background-size: 100%;
+    background-position: top center;
+  }
+  100% {
+    background-size: 120%;
+    background-position: top center;
+  }
 }
 
 @keyframes awesome-bg {
+  0% {
+    background-size: 100%;
+    background-position: top center;
+  }
+  100% {
+    background-size: 120%;
+    background-position: top center;
+  }
+}
+/*fine animazione bg home*/
 
-from {
-	background-size: 100%;
-	background-position: top center;
+.pd10 {
+	padding: 10px;
 }
 
- to {
- 	background-size: 120%;
- 	background-position: top left;
+.pd30 {
+  padding: 30px;
 }
 
+.mt20 {
+	margin-top: 20px;
 }
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+/*lightbox*/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+/*
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+*/
+.lightbox:target {
+  outline: none;
+  display: block;
+}
+
+#work1> .row, #work2> .row, #work3> .row, #work4> .row {
+  display: inline-block;
+  width: 60%;
+  color: #fff;
+}
+
+.lightbox img {
+  position: relative;
+}
+
